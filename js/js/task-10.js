@@ -1,7 +1,9 @@
 "use strict";
 
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
 const inputEl = document.querySelector('input[type="number"]');
@@ -36,7 +38,7 @@ const createBoxes = () => {
 
 const destroyBoxes = () => {
   boxesEl.innerHTML = " ";
-  inputEl.value = "";
+  inputEl.value = " ";
   allItems.length = 0;
   itemWidth = 30;
   itemHeight = 30;
