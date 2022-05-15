@@ -7,3 +7,5 @@ const onInputMove = (event) => {
   console.log(event.currentTarget.value);
   textEl.style.fontSize = `${event.currentTarget.value}px`;
 };
+
+inputEl.addEventListener("input", onInputMove);
